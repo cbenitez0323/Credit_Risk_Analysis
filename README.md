@@ -36,11 +36,20 @@ Used credit card data in order to predict credit risk. Because of the unbalanced
 
 <img width="665" alt="combo sampling" src="https://user-images.githubusercontent.com/102255823/185990327-5f8134b7-d4e2-4805-a5bf-839e089d8f80.png">
 
-### Balancted Random Forest
--
+### Balanced Random Forest
+- Used data to train a Balanced Random Forest Classifier.
+- The balanced accuracy score was 0.74 which is high. 
+- The confusion matrix showed that 30 of the predicted low risk were actually high risk.
+- The precision was low and the accuracy was high for the the high risk prediction which lead to the low F1 score. 
+
+<img width="665" alt="balanced randomforestclassifier" src="https://user-images.githubusercontent.com/102255823/185991356-10be1bde-a043-4b80-a7fe-8d50a1f9039b.png">
 
 ### Easy Ensemble 
+- The easy ensemble had the highest balanced accuracy score at 0.92.
+- The confusion matrix showed 7 accounts were predicted to be low rish but were actually high risk which is better than balanced random forest. 
+- For predicting high risk accounts, the F1 score was 0.1 which is better than the previous model and therefore there is a better balance between the precision and recall of the model. 
 
+<img width="661" alt="easyensembleclassifier" src="https://user-images.githubusercontent.com/102255823/185992140-39a17a69-d4a2-4ed6-9875-e1ab92775399.png">
 
 ## Summary: 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. If you do not recommend any of the models, justify your reasoning.
+The models did fairly poor because they have a low F1 score that showed there was an imbalance between the precision and recall of the model. When it comes to predicting if an account is low or high credit risk, it is better to be able to correctly predict all the high risk accounts but to also inccorectly include low risk accounts in the classification. Therefore it is understandable why the models would have high recall. When looking at the features importance, 'total_rec_prncp' was the highest therefore it was the highest predictor in determining if an account was high risk. However, there were also many features that were very small predictors. It may imporve the model to be able to remove those features and see if the model improves. Most likely, other features would need to be tested to see if the model could be imporved. 
