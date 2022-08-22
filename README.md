@@ -16,7 +16,6 @@ Used credit card data in order to predict credit risk. Because of the unbalanced
 - Next, oversampled using SMOTE algorithm.
 - The balanced accuracy score was about 0.66, which is slightly better than the previous oversampling technique. 
 - The confusion matrix shows that the recall for the high risk class is high risk is high. This means that there is a low nummber of false positives. In this case a low number of incorrectly predicting a low rish when actually being a high risk account. 
-- The 
 
 <img width="669" alt="SMOTE oversampling" src="https://user-images.githubusercontent.com/102255823/185986431-adecc9e6-ab2e-4f3b-b76c-dffb2da31bb5.png">
 
